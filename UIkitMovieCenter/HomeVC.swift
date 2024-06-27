@@ -13,6 +13,7 @@ class HomeVC: UIViewController {
     @IBOutlet var movieCollectionView: UICollectionView!
     
     
+    @IBOutlet var topPicksCollectionView: UICollectionView!
     
     
     var movies : [Movie] = [
@@ -31,6 +32,9 @@ class HomeVC: UIViewController {
         let nibName = UINib(nibName: MovieViewCell.identifier, bundle: nil)
         self.movieCollectionView.register(nibName, forCellWithReuseIdentifier: MovieViewCell.identifier)
         self.movieCollectionView.showsHorizontalScrollIndicator = false
+        
+        self.topPicksCollectionView.register(nibName, forCellWithReuseIdentifier: MovieViewCell.identifier)
+        self.topPicksCollectionView.showsHorizontalScrollIndicator = false
   
     }
     
