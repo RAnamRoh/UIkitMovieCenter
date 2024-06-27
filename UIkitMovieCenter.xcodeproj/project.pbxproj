@@ -13,6 +13,10 @@
 		4A0384DF2C2A8856002FA7DE /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4A0384DE2C2A8856002FA7DE /* Base */; };
 		4A0384E12C2A8857002FA7DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A0384E02C2A8857002FA7DE /* Assets.xcassets */; };
 		4A0384E42C2A8857002FA7DE /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4A0384E32C2A8857002FA7DE /* Base */; };
+		4A0384EC2C2AB993002FA7DE /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0384EB2C2AB993002FA7DE /* HomeVC.swift */; };
+		4A4C4E282C2C2B0E00F3299C /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4C4E272C2C2B0E00F3299C /* Movie.swift */; };
+		4AB430E62C2C49B000BF018B /* MovieViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB430E42C2C49B000BF018B /* MovieViewCell.swift */; };
+		4AB430E72C2C49B000BF018B /* MovieViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AB430E52C2C49B000BF018B /* MovieViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		4A0384E02C2A8857002FA7DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A0384E32C2A8857002FA7DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A0384E52C2A8857002FA7DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A0384EB2C2AB993002FA7DE /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		4A4C4E272C2C2B0E00F3299C /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		4AB430E42C2C49B000BF018B /* MovieViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewCell.swift; sourceTree = "<group>"; };
+		4AB430E52C2C49B000BF018B /* MovieViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,27 @@
 		4A0384D62C2A8856002FA7DE /* UIkitMovieCenter */ = {
 			isa = PBXGroup;
 			children = (
+				4A4C4E262C2C2AFA00F3299C /* Model */,
 				4A0384D72C2A8856002FA7DE /* AppDelegate.swift */,
 				4A0384D92C2A8856002FA7DE /* SceneDelegate.swift */,
 				4A0384DB2C2A8856002FA7DE /* ViewController.swift */,
+				4A0384EB2C2AB993002FA7DE /* HomeVC.swift */,
 				4A0384DD2C2A8856002FA7DE /* Main.storyboard */,
 				4A0384E02C2A8857002FA7DE /* Assets.xcassets */,
 				4A0384E22C2A8857002FA7DE /* LaunchScreen.storyboard */,
 				4A0384E52C2A8857002FA7DE /* Info.plist */,
+				4AB430E42C2C49B000BF018B /* MovieViewCell.swift */,
+				4AB430E52C2C49B000BF018B /* MovieViewCell.xib */,
 			);
 			path = UIkitMovieCenter;
+			sourceTree = "<group>";
+		};
+		4A4C4E262C2C2AFA00F3299C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4A4C4E272C2C2B0E00F3299C /* Movie.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A0384E12C2A8857002FA7DE /* Assets.xcassets in Resources */,
+				4AB430E72C2C49B000BF018B /* MovieViewCell.xib in Resources */,
 				4A0384E42C2A8857002FA7DE /* Base in Resources */,
 				4A0384DF2C2A8856002FA7DE /* Base in Resources */,
 			);
@@ -139,8 +160,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A0384DC2C2A8856002FA7DE /* ViewController.swift in Sources */,
+				4A0384EC2C2AB993002FA7DE /* HomeVC.swift in Sources */,
+				4A4C4E282C2C2B0E00F3299C /* Movie.swift in Sources */,
 				4A0384D82C2A8856002FA7DE /* AppDelegate.swift in Sources */,
 				4A0384DA2C2A8856002FA7DE /* SceneDelegate.swift in Sources */,
+				4AB430E62C2C49B000BF018B /* MovieViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
