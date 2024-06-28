@@ -25,7 +25,6 @@ class HomeVC: UIViewController {
     Movie(name: "Movie 3", image: "tempBack"),
     Movie(name: "Movie 4", image: "tempBack"),
     Movie(name: "Movie 5", image: "tempBack")
-    
     ]
     
     func initViewModel(){
@@ -59,6 +58,13 @@ extension HomeVC : UICollectionViewDelegate, UICollectionViewDataSource{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MovieViewCell.identifier, for: indexPath) as! MovieViewCell
         cell.movie = viewModel.movieList[indexPath.row]
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let destinationVC = self.storyboard?.instantiateViewController(withIdentifier: "MovieDetailsVC") as! MovieDetailsVC
+        destinationVC.movieId = viewModel.movieList[indexPath.row].id
+        print(viewModel.movieList[indexPath.row].id)
+        self.navigationController?.pushViewController(destinationVC, animated: true)
     }
     
     

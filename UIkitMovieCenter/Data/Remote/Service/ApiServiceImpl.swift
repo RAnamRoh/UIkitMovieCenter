@@ -8,6 +8,8 @@
 import Foundation
 
 class ApiServiceImpl : ApiService {
+   
+    
     
     private let apiClient : ApiClient
     private var baseURL = URL(string: "https://yts.mx/api/v2")!
@@ -23,6 +25,16 @@ class ApiServiceImpl : ApiService {
     func getMovieList() async throws -> BaseResponse<MovieListResponse> {
         let url = baseURL.appendingPathComponent("/list_movies.json")
         let response : BaseResponse<MovieListResponse> = try await apiClient.get(url: url)
+        return response
+    }
+    
+    
+    
+    func getMovieDetails(movieId: Int) async throws -> BaseResponse<MovieDetailsResponse> {
+        var components = URLComponents(url: baseURL.appendingPathComponent("/movie_details.json"), resolvingAgainstBaseURL: false)!
+        components.queryItems = [URLQueryItem(name: "movie_id", value: "\(movieId)")]
+        let url = components.url!
+        let response : BaseResponse<MovieDetailsResponse> = try await apiClient.get(url: url)
         return response
     }
     

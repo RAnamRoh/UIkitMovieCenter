@@ -23,5 +23,10 @@ class MovieRepositoryImpl : MovieRepository {
         }
     }
     
+    func getMovieDetails(movieId : Int) async throws -> MovieDetailsModel {
+        let response : BaseResponse<MovieDetailsResponse> = try await apiService.getMovieDetails(movieId: movieId)
+        return MovieDetailsModel.fromMovie(movie: response.data.movie)
+    }
+    
     
 }

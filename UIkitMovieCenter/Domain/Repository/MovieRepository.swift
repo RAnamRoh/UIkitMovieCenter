@@ -9,4 +9,6 @@ import Foundation
 
 protocol MovieRepository{
     func getMovieList() async throws -> [MovieListItemModel]
+    func getMovieDetails(movieId : Int) async throws -> MovieDetailsModel 
+       
 }
