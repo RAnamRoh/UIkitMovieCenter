@@ -23,11 +23,11 @@ class ApiClientImpl : ApiClient {
             request.httpBody = body
         }
         
-        logRequest(url: url, method: method, body: body)
+       // logRequest(url: url, method: method, body: body)
         
         let (data,response) = try await URLSession.shared.data(for: request)
         
-        logResponse(data: data, response: response)
+       // logResponse(data: data, response: response)
         
         guard let httpResponse = response as? HTTPURLResponse, 200..<300 ~= httpResponse.statusCode else {
             throw ApiClientError.noData

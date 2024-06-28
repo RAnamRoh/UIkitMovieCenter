@@ -16,7 +16,7 @@ class MovieViewCell: UICollectionViewCell {
     
     @IBOutlet var movieTitle: UILabel!
     
-    var movie : Movie? {
+    var movie : MovieListItemModel? {
         didSet{
             configureCell()
         }
@@ -35,8 +35,8 @@ class MovieViewCell: UICollectionViewCell {
             return
         }
         
-        movieImage.image = UIImage(named: movie.image)
-        movieTitle.text = movie.name
+        movieImage.setImage(with: movie.poster)
+        movieTitle.text = movie.title
         
     }
     

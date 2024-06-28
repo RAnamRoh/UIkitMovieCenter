@@ -22,6 +22,12 @@
 		4A58D2142C2DA26F000D9057 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A58D2132C2DA26F000D9057 /* ApiClient.swift */; };
 		4A58D2162C2DA2EE000D9057 /* ApiClientImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A58D2152C2DA2EE000D9057 /* ApiClientImpl.swift */; };
 		4A58D2182C2DA58A000D9057 /* ApiClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A58D2172C2DA58A000D9057 /* ApiClientError.swift */; };
+		4A8AC37C2C2E850A00EE7996 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8AC37B2C2E850A00EE7996 /* ApiService.swift */; };
+		4A8AC37F2C2E85A200EE7996 /* ApiServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8AC37E2C2E85A200EE7996 /* ApiServiceImpl.swift */; };
+		4A8AC3822C2E878E00EE7996 /* MovieRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8AC3812C2E878E00EE7996 /* MovieRepositoryImpl.swift */; };
+		4A8AC3862C2E8A3000EE7996 /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8AC3852C2E8A3000EE7996 /* MovieListViewModel.swift */; };
+		4A8AC3892C2E976E00EE7996 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 4A8AC3882C2E976E00EE7996 /* Kingfisher */; };
+		4A8AC38D2C2E97B900EE7996 /* UIImageView + Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8AC38C2C2E97B900EE7996 /* UIImageView + Extention.swift */; };
 		4AB430E62C2C49B000BF018B /* MovieViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB430E42C2C49B000BF018B /* MovieViewCell.swift */; };
 		4AB430E72C2C49B000BF018B /* MovieViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AB430E52C2C49B000BF018B /* MovieViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -44,6 +50,11 @@
 		4A58D2132C2DA26F000D9057 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		4A58D2152C2DA2EE000D9057 /* ApiClientImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientImpl.swift; sourceTree = "<group>"; };
 		4A58D2172C2DA58A000D9057 /* ApiClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientError.swift; sourceTree = "<group>"; };
+		4A8AC37B2C2E850A00EE7996 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		4A8AC37E2C2E85A200EE7996 /* ApiServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceImpl.swift; sourceTree = "<group>"; };
+		4A8AC3812C2E878E00EE7996 /* MovieRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRepositoryImpl.swift; sourceTree = "<group>"; };
+		4A8AC3852C2E8A3000EE7996 /* MovieListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModel.swift; sourceTree = "<group>"; };
+		4A8AC38C2C2E97B900EE7996 /* UIImageView + Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + Extention.swift"; sourceTree = "<group>"; };
 		4AB430E42C2C49B000BF018B /* MovieViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewCell.swift; sourceTree = "<group>"; };
 		4AB430E52C2C49B000BF018B /* MovieViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -53,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A8AC3892C2E976E00EE7996 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +90,8 @@
 		4A0384D62C2A8856002FA7DE /* UIkitMovieCenter */ = {
 			isa = PBXGroup;
 			children = (
+				4A8AC38A2C2E979700EE7996 /* Util */,
+				4A8AC3832C2E899900EE7996 /* Presentation */,
 				4A58D2062C2D9DE3000D9057 /* Data */,
 				4A58D2022C2D9CD0000D9057 /* Domain */,
 				4A4C4E262C2C2AFA00F3299C /* Model */,
@@ -123,6 +137,7 @@
 		4A58D2062C2D9DE3000D9057 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				4A8AC3802C2E876B00EE7996 /* Repository */,
 				4A58D2112C2DA241000D9057 /* Remote */,
 				4A58D2082C2D9E00000D9057 /* Model */,
 			);
@@ -158,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				4A58D2122C2DA259000D9057 /* Client */,
+				4A8AC37D2C2E857600EE7996 /* Service */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -170,6 +186,55 @@
 				4A58D2172C2DA58A000D9057 /* ApiClientError.swift */,
 			);
 			path = Client;
+			sourceTree = "<group>";
+		};
+		4A8AC37D2C2E857600EE7996 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				4A8AC37B2C2E850A00EE7996 /* ApiService.swift */,
+				4A8AC37E2C2E85A200EE7996 /* ApiServiceImpl.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		4A8AC3802C2E876B00EE7996 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				4A8AC3812C2E878E00EE7996 /* MovieRepositoryImpl.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		4A8AC3832C2E899900EE7996 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				4A8AC3842C2E89AD00EE7996 /* Home */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		4A8AC3842C2E89AD00EE7996 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				4A8AC3852C2E8A3000EE7996 /* MovieListViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		4A8AC38A2C2E979700EE7996 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				4A8AC38B2C2E979E00EE7996 /* Extentions */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		4A8AC38B2C2E979E00EE7996 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				4A8AC38C2C2E97B900EE7996 /* UIImageView + Extention.swift */,
+			);
+			path = Extentions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +253,9 @@
 			dependencies = (
 			);
 			name = UIkitMovieCenter;
+			packageProductDependencies = (
+				4A8AC3882C2E976E00EE7996 /* Kingfisher */,
+			);
 			productName = UIkitMovieCenter;
 			productReference = 4A0384D42C2A8856002FA7DE /* UIkitMovieCenter.app */;
 			productType = "com.apple.product-type.application";
@@ -216,6 +284,9 @@
 				Base,
 			);
 			mainGroup = 4A0384CB2C2A8856002FA7DE;
+			packageReferences = (
+				4A8AC3872C2E976E00EE7996 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 4A0384D52C2A8856002FA7DE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -245,17 +316,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A58D2142C2DA26F000D9057 /* ApiClient.swift in Sources */,
+				4A8AC3862C2E8A3000EE7996 /* MovieListViewModel.swift in Sources */,
 				4A0384DC2C2A8856002FA7DE /* ViewController.swift in Sources */,
+				4A8AC38D2C2E97B900EE7996 /* UIImageView + Extention.swift in Sources */,
 				4A58D2052C2D9D3F000D9057 /* MovieListItemModel.swift in Sources */,
 				4A0384EC2C2AB993002FA7DE /* HomeVC.swift in Sources */,
 				4A4C4E282C2C2B0E00F3299C /* Movie.swift in Sources */,
 				4A58D20D2C2D9F00000D9057 /* MovieListResponse.swift in Sources */,
+				4A8AC3822C2E878E00EE7996 /* MovieRepositoryImpl.swift in Sources */,
 				4A0384D82C2A8856002FA7DE /* AppDelegate.swift in Sources */,
 				4A0384DA2C2A8856002FA7DE /* SceneDelegate.swift in Sources */,
 				4AB430E62C2C49B000BF018B /* MovieViewCell.swift in Sources */,
 				4A58D2162C2DA2EE000D9057 /* ApiClientImpl.swift in Sources */,
 				4A58D2102C2D9F7D000D9057 /* MovieRepository.swift in Sources */,
+				4A8AC37F2C2E85A200EE7996 /* ApiServiceImpl.swift in Sources */,
 				4A58D2182C2DA58A000D9057 /* ApiClientError.swift in Sources */,
+				4A8AC37C2C2E850A00EE7996 /* ApiService.swift in Sources */,
 				4A58D20B2C2D9E6E000D9057 /* BaseResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,6 +555,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4A8AC3872C2E976E00EE7996 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.12.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4A8AC3882C2E976E00EE7996 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4A8AC3872C2E976E00EE7996 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4A0384CC2C2A8856002FA7DE /* Project object */;
 }

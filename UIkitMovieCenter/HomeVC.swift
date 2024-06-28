@@ -16,6 +16,9 @@ class HomeVC: UIViewController {
     @IBOutlet var topPicksCollectionView: UICollectionView!
     
     
+    private let viewModel = MovieListViewModel(
+        movieRepository: MovieRepositoryImpl(apiService: ApiServiceImpl(apiClient: ApiClientImpl())))
+    
     var movies : [Movie] = [
     Movie(name: "Movie 1", image: "tempBack"),
     Movie(name: "Movie 2", image: "tempBack"),
@@ -25,10 +28,16 @@ class HomeVC: UIViewController {
     
     ]
     
+    func initViewModel(){
+        viewModel.userDelegate = self
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        initViewModel()
+        
         let nibName = UINib(nibName: MovieViewCell.identifier, bundle: nil)
         self.movieCollectionView.register(nibName, forCellWithReuseIdentifier: MovieViewCell.identifier)
         self.movieCollectionView.showsHorizontalScrollIndicator = false
@@ -43,16 +52,24 @@ class HomeVC: UIViewController {
 
 extension HomeVC : UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        movies.count
+        viewModel.movieList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MovieViewCell.identifier, for: indexPath) as! MovieViewCell
-        cell.movie = movies[indexPath.item]
+        cell.movie = viewModel.movieList[indexPath.row]
         return cell
     }
     
     
 }
 
+extension HomeVC : UserServices{
+    func reloadData() {
+        self.movieCollectionView.reloadData()
+        self.topPicksCollectionView.reloadData()
+    }
+    
+    
+}
 
