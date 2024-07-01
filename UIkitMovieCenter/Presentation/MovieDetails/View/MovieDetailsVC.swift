@@ -25,15 +25,15 @@ class MovieDetailsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //print(movieId)
+        
         configureBindings()
         viewModel.getMovieDetails(movieId: movieId!)
+        
     }
     
     func configureBindings(){
         viewModel.didUpdateMovie = { [weak self] in
             self?.configureUI()
-            
         }
     }
     
@@ -48,15 +48,25 @@ class MovieDetailsVC: UIViewController {
         duration.text = "\(movie.duration)"
         rating.text = "\(movie.rating)"
         movieDescription.text = movie.description
-        displayRating(Int(movie.rating))
+        displayRating(Int(convertRating(rating: movie.rating)))
     }
     
     func displayRating(_ rating: Int) {
           for (index, view) in starStackView.arrangedSubviews.enumerated() {
               guard let imageView = view as? UIImageView else { return }
               imageView.image = UIImage(systemName: index < rating ? "star.fill" : "star")
+              imageView.tintColor = UIColor(index < rating ? .yellow : .gray)
           }
       }
+    
+    func convertRating(rating: Double) -> Double {
+
+
+      let clampedRating = min(max(rating, 0.0), 10.0)
+      let convertedRating = round(clampedRating / 2.0)
+
+      return convertedRating
+    }
     
 
 

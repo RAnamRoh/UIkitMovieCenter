@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchCell" rowHeight="80" id="KGk-i7-Jjw" customClass="SearchCell" customModule="UIkitMovieCenter" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="392" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="392" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="47v-Cg-e2E">
+                        <rect key="frame" x="0.0" y="0.0" width="392" height="70"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tempBack" translatesAutoresizingMaskIntoConstraints="NO" id="Ahm-Xv-aJf">
+                                <rect key="frame" x="0.0" y="0.0" width="170" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="mmH-tk-Otu"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fG1-VF-Xp1">
+                                <rect key="frame" x="180" y="24.666666666666671" width="94.666666666666686" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5.5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBJ-zM-Nnv">
+                                <rect key="frame" x="207" y="55.333333333333343" width="23.666666666666657" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="2Wt-SO-4wA">
+                                <rect key="frame" x="180" y="55.333333333333329" width="22" height="20"/>
+                                <color key="tintColor" systemColor="systemYellowColor"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="2Wt-SO-4wA" firstAttribute="top" secondItem="fG1-VF-Xp1" secondAttribute="bottom" constant="10" id="01d-Q2-rfd"/>
+                            <constraint firstItem="fG1-VF-Xp1" firstAttribute="centerY" secondItem="Ahm-Xv-aJf" secondAttribute="centerY" id="1P9-Q4-Luw"/>
+                            <constraint firstAttribute="bottom" secondItem="Ahm-Xv-aJf" secondAttribute="bottom" id="6LU-in-HED"/>
+                            <constraint firstItem="2Wt-SO-4wA" firstAttribute="leading" secondItem="Ahm-Xv-aJf" secondAttribute="trailing" constant="10" id="HMq-8t-hAI"/>
+                            <constraint firstItem="Ahm-Xv-aJf" firstAttribute="leading" secondItem="47v-Cg-e2E" secondAttribute="leading" id="Lhv-QS-WZW"/>
+                            <constraint firstItem="mBJ-zM-Nnv" firstAttribute="centerY" secondItem="2Wt-SO-4wA" secondAttribute="centerY" id="SNT-J9-SNV"/>
+                            <constraint firstItem="mBJ-zM-Nnv" firstAttribute="leading" secondItem="2Wt-SO-4wA" secondAttribute="trailing" constant="5" id="azB-Am-g3R"/>
+                            <constraint firstItem="fG1-VF-Xp1" firstAttribute="leading" secondItem="Ahm-Xv-aJf" secondAttribute="trailing" constant="10" id="h0P-Z9-nls"/>
+                            <constraint firstItem="Ahm-Xv-aJf" firstAttribute="top" secondItem="47v-Cg-e2E" secondAttribute="top" id="hQf-r8-uAU"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="47v-Cg-e2E" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="3qs-EE-APp"/>
+                    <constraint firstAttribute="bottom" secondItem="47v-Cg-e2E" secondAttribute="bottom" constant="10" id="bbu-Yc-VHt"/>
+                    <constraint firstItem="47v-Cg-e2E" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="dpe-Co-Vf1"/>
+                    <constraint firstAttribute="trailing" secondItem="47v-Cg-e2E" secondAttribute="trailing" id="gjy-5w-CGq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="movieName" destination="fG1-VF-Xp1" id="F17-vE-8fV"/>
+                <outlet property="myView" destination="47v-Cg-e2E" id="rnS-LL-e0t"/>
+                <outlet property="posterImage" destination="Ahm-Xv-aJf" id="irx-aD-FRS"/>
+                <outlet property="rating" destination="mBJ-zM-Nnv" id="wKu-6i-Al5"/>
+            </connections>
+            <point key="canvasLocation" x="65.648854961832058" y="92.957746478873247"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <image name="tempBack" width="5230" height="3269"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

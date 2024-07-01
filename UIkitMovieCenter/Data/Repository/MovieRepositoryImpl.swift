@@ -28,5 +28,15 @@ class MovieRepositoryImpl : MovieRepository {
         return MovieDetailsModel.fromMovie(movie: response.data.movie)
     }
     
+    func getMovieListByQuery(query : String) async throws -> [MovieListItemModel] {
+        
+        let response : BaseResponse<MovieListResponse> = try await apiService.getMovieListByQuery(query: query)
+        
+        return response.data.movies.map{ movie in
+            MovieListItemModel.fromMovie(movie: movie)
+        }
+        
+    }
+    
     
 }
