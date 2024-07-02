@@ -29,6 +29,7 @@
 		4A58D2142C2DA26F000D9057 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A58D2132C2DA26F000D9057 /* ApiClient.swift */; };
 		4A58D2162C2DA2EE000D9057 /* ApiClientImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A58D2152C2DA2EE000D9057 /* ApiClientImpl.swift */; };
 		4A58D2182C2DA58A000D9057 /* ApiClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A58D2172C2DA58A000D9057 /* ApiClientError.swift */; };
+		4A71981D2C33F40B00D0DEF6 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A71981C2C33F40B00D0DEF6 /* Utilities.swift */; };
 		4A8AC37C2C2E850A00EE7996 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8AC37B2C2E850A00EE7996 /* ApiService.swift */; };
 		4A8AC37F2C2E85A200EE7996 /* ApiServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8AC37E2C2E85A200EE7996 /* ApiServiceImpl.swift */; };
 		4A8AC3822C2E878E00EE7996 /* MovieRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8AC3812C2E878E00EE7996 /* MovieRepositoryImpl.swift */; };
@@ -68,6 +69,7 @@
 		4A58D2132C2DA26F000D9057 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		4A58D2152C2DA2EE000D9057 /* ApiClientImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientImpl.swift; sourceTree = "<group>"; };
 		4A58D2172C2DA58A000D9057 /* ApiClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientError.swift; sourceTree = "<group>"; };
+		4A71981C2C33F40B00D0DEF6 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		4A8AC37B2C2E850A00EE7996 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		4A8AC37E2C2E85A200EE7996 /* ApiServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceImpl.swift; sourceTree = "<group>"; };
 		4A8AC3812C2E878E00EE7996 /* MovieRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRepositoryImpl.swift; sourceTree = "<group>"; };
@@ -329,6 +331,7 @@
 			children = (
 				4A8AC38B2C2E979E00EE7996 /* Extentions */,
 				4A0C09D22C32A031003B2469 /* Debouncer.swift */,
+				4A71981C2C33F40B00D0DEF6 /* Utilities.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -474,6 +477,7 @@
 				4A0C09CF2C3289EA003B2469 /* SettingsVC.swift in Sources */,
 				4A0384D82C2A8856002FA7DE /* AppDelegate.swift in Sources */,
 				4A0384DA2C2A8856002FA7DE /* SceneDelegate.swift in Sources */,
+				4A71981D2C33F40B00D0DEF6 /* Utilities.swift in Sources */,
 				4AB430E62C2C49B000BF018B /* MovieViewCell.swift in Sources */,
 				4A8AC39A2C2ECB2E00EE7996 /* MovieDetailsVC.swift in Sources */,
 				4A8AC3912C2EC9D200EE7996 /* MovieGenre.swift in Sources */,

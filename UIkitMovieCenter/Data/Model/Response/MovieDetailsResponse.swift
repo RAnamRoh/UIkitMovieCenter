@@ -27,6 +27,7 @@ struct MovieDetailsResponse: Codable {
         let torrents: [Torrent]
         let dateUploaded: String
         let dateUploadedUnix: Int
+        var cast : [Cast]?
         
         enum CodingKeys: String, CodingKey {
             case id, url
@@ -49,7 +50,10 @@ struct MovieDetailsResponse: Codable {
             case torrents
             case dateUploaded = "date_uploaded"
             case dateUploadedUnix = "date_uploaded_unix"
+            case cast
         }
+        
+      
         
         // MARK: - Torrent
         struct Torrent: Codable {
@@ -75,4 +79,13 @@ struct MovieDetailsResponse: Codable {
             }
         }
     }
+}
+
+
+struct Cast : Codable , Hashable{
+    let name : String
+    let character_name : String
+    let url_small_image : String?
+
+    //static var castExample = Cast(name: "Bruce Willis", character_name: "Split", url_small_image: "cast_Image")
 }

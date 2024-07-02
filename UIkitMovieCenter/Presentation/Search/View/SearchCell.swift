@@ -17,6 +17,13 @@ class SearchCell: UITableViewCell {
     @IBOutlet var movieName: UILabel!
     @IBOutlet var rating: UILabel!
     
+    @IBOutlet var year: UILabel!
+    
+    @IBOutlet var runtime: UILabel!
+    
+    
+    @IBOutlet var genre: UILabel!
+    
     
     var movie : MovieListItemModel? {
         didSet{
@@ -28,8 +35,9 @@ class SearchCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        myView.layer.cornerRadius = 20
-        myView.clipsToBounds = true
+    
+        
+        //posterImage.clipsToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -48,6 +56,25 @@ class SearchCell: UITableViewCell {
         posterImage.setImage(with: movie.poster)
         movieName.text = movie.title
         rating.text = String(movie.rating)
+        year.text = String(movie.releaseYear)
+        runtime.text = Utilities.minutesToHoursAndMinutesPoster(movie.runtime)
+        genre.text = getGenreString(movie: movie)
+    }
+    
+    
+    func getGenreString(movie : MovieListItemModel) -> String{
+        
+        let genreStrings = movie.genres.map { $0.toString() }
+        
+        let combinedString = genreStrings.enumerated().map { (index, element) in
+            if index == genreStrings.count - 1 {
+                      return element
+                  } else {
+                      return element + " • "
+                  }
+              }.joined()
+        
+        return combinedString
     }
     
 }

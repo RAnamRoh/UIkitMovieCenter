@@ -17,6 +17,7 @@ struct MovieDetailsModel {
     let rating: Double
     let duration: Int
     let genres: [MovieGenre]
+    let cast : [Cast]
  
     
     
@@ -29,7 +30,8 @@ struct MovieDetailsModel {
             releaseYear: movie.year,
             rating: movie.rating,
             duration: movie.runtime,
-            genres: movie.genres.map({ MovieGenre.fromString($0) })
+            genres: movie.genres.map({ MovieGenre.fromString($0) }),
+            cast: movie.cast ?? []
         )
     }
     
@@ -39,7 +41,9 @@ struct MovieDetailsModel {
             title: title,
             poster: largeCoverImage,
             rating: rating,
-            releaseYear: releaseYear
+            runtime: duration,
+            releaseYear: releaseYear, 
+            genres: genres
         )
     }
     

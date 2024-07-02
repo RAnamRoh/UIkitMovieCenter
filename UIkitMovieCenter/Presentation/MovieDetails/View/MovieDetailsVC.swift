@@ -23,17 +23,24 @@ class MovieDetailsVC: UIViewController {
     
     @IBOutlet var starStackView: UIStackView!
     
+    @IBOutlet var castCollection: UICollectionView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let nibName = UINib(nibName: MovieViewCell.identifier, bundle: nil)
+        castCollection.register(nibName, forCellWithReuseIdentifier: MovieViewCell.identifier)
+        
         configureBindings()
         viewModel.getMovieDetails(movieId: movieId!)
-        
+  
     }
     
     func configureBindings(){
         viewModel.didUpdateMovie = { [weak self] in
             self?.configureUI()
+            self?.castCollection.reloadData()
         }
     }
     
@@ -45,10 +52,11 @@ class MovieDetailsVC: UIViewController {
         moviePoster.setImage(with: movie.largeCoverImage)
         moviePoster.layer.cornerRadius = 20
         year.text = "\(movie.releaseYear)"
-        duration.text = "\(movie.duration)"
+        duration.text = Utilities.minutesToHoursAndMinutes(movie.duration)
         rating.text = "\(movie.rating)"
         movieDescription.text = movie.description
         displayRating(Int(convertRating(rating: movie.rating)))
+        
     }
     
     func displayRating(_ rating: Int) {
@@ -67,8 +75,20 @@ class MovieDetailsVC: UIViewController {
 
       return convertedRating
     }
+
+}
+
+extension MovieDetailsVC : UICollectionViewDelegate, UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        viewModel.movie?.cast.count ?? 0
+    }
     
-
-
-
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MovieViewCell.identifier, for: indexPath) as! MovieViewCell
+        cell.movieImage.setImage(with: viewModel.movie?.cast[indexPath.row].url_small_image ?? "")
+        cell.movieTitle.text = viewModel.movie?.cast[indexPath.row].name ?? ""
+        return cell
+    }
+    
+    
 }

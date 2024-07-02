@@ -13,7 +13,9 @@ struct MovieListItemModel : Identifiable{
     var title: String
     var poster: String
     var rating: Double
+    var runtime : Int
     var releaseYear: Int
+    let genres: [MovieGenre]
     
     
     
@@ -23,7 +25,9 @@ struct MovieListItemModel : Identifiable{
             title: movie.title,
             poster: movie.mediumCoverImage,
             rating: movie.rating,
-            releaseYear: movie.year
+            runtime: movie.runtime,
+            releaseYear: movie.year, 
+            genres: movie.genres.map({ MovieGenre.fromString($0) })
         )
     }
     

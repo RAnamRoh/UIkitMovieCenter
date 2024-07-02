@@ -20,6 +20,8 @@ class SearchVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 44
         let nibName = UINib(nibName: SearchCell.identifier, bundle: nil)
         tableView.register(nibName, forCellReuseIdentifier: SearchCell.identifier)
         
@@ -65,12 +67,27 @@ extension SearchVC : UITableViewDelegate, UITableViewDataSource {
         self.navigationController?.pushViewController(destinationVC, animated: true)
     }
     
+    
+    
+  
+    
 }
 
 extension SearchVC : UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         viewModel.searchQuery = searchText
     }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = ""
+        viewModel.searchQuery = ""
+        searchBar.resignFirstResponder()
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+    
 }
 
 
