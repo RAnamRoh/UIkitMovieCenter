@@ -37,6 +37,12 @@ class MovieDetailsVC: UIViewController {
   
     }
     
+    
+    @IBAction func watchlistButtonPressed(_ sender: UIButton) {
+        addMovieToWatchList()
+    }
+    
+    
     func configureBindings(){
         viewModel.didUpdateMovie = { [weak self] in
             self?.configureUI()
@@ -75,6 +81,12 @@ class MovieDetailsVC: UIViewController {
 
       return convertedRating
     }
+    
+    
+    private func addMovieToWatchList(){
+        guard let movie = viewModel.movie else {return}
+        print("You Pressed a Watchlist Button for : \(movie.title)")
+    }
 
 }
 
@@ -89,6 +101,8 @@ extension MovieDetailsVC : UICollectionViewDelegate, UICollectionViewDataSource{
         cell.movieTitle.text = viewModel.movie?.cast[indexPath.row].name ?? ""
         return cell
     }
+    
+    
     
     
 }

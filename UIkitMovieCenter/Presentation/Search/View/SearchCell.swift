@@ -24,6 +24,7 @@ class SearchCell: UITableViewCell {
     
     @IBOutlet var genre: UILabel!
     
+    @IBOutlet var watchListBTN: UIButton!
     
     var movie : MovieListItemModel? {
         didSet{
@@ -75,6 +76,18 @@ class SearchCell: UITableViewCell {
               }.joined()
         
         return combinedString
+    }
+    
+    
+    
+    @IBAction func watchLIstButtonPressed(_ sender: UIButton) {
+        addMovieToWatchList()
+    }
+    
+    
+    private func addMovieToWatchList(){
+        guard let movie = movie else {return}
+        print("You Pressed a Watchlist Button for : \(movie.title)")
     }
     
 }

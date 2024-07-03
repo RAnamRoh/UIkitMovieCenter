@@ -11,5 +11,7 @@ struct Movie {
     
     let name : String
     let image : String
-    
+    let genres : [String]
+    let year : Int
+    let runtime : Int
 }

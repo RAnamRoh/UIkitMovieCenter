@@ -19,12 +19,14 @@ class MovieListViewModel {
         
         didSet{
             self.userDelegate?.reloadData()
+        
         }
         
     }
     private var movieRepository : MovieRepository
     
     weak var userDelegate: UserServices?
+
     
     init(movieRepository: MovieRepository) {
         self.movieRepository = movieRepository
