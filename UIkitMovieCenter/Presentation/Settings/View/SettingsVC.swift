@@ -9,6 +9,9 @@ import UIKit
 
 class SettingsVC: UIViewController {
 
+    
+    let viewModel = AuthViewModel.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,14 +19,20 @@ class SettingsVC: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func logOutButtonPressed(_ sender: UIButton) {
+        viewModel.signOut()
+        navigateToRoot()
     }
-    */
-
+    
+    func navigateToRoot(){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+              if let loginNavController = storyboard.instantiateViewController(withIdentifier: "AuthNavController") as? UINavigationController {
+                  if let sceneDelegate = view.window?.windowScene?.delegate as? SceneDelegate {
+                      sceneDelegate.window?.rootViewController = loginNavController
+                      sceneDelegate.window?.makeKeyAndVisible()
+                  }
+              }
+    }
+    
 }

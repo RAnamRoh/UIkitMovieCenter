@@ -20,6 +20,11 @@
 		4A0C09D32C32A031003B2469 /* Debouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0C09D22C32A031003B2469 /* Debouncer.swift */; };
 		4A0C09D62C32CB38003B2469 /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A0C09D52C32CB38003B2469 /* SearchCell.xib */; };
 		4A0C09D72C32CB38003B2469 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0C09D42C32CB38003B2469 /* SearchCell.swift */; };
+		4A1A78E92C3697F800737514 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A1A78E82C3697F800737514 /* GoogleService-Info.plist */; };
+		4A1A78EC2C36987F00737514 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 4A1A78EB2C36987F00737514 /* FirebaseAuth */; };
+		4A1A78EE2C36987F00737514 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 4A1A78ED2C36987F00737514 /* FirebaseFirestore */; };
+		4A1A78F02C36987F00737514 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4A1A78EF2C36987F00737514 /* FirebaseFirestoreSwift */; };
+		4A1A78F82C369F1800737514 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A78F72C369F1800737514 /* LoginVC.swift */; };
 		4A4C4E282C2C2B0E00F3299C /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4C4E272C2C2B0E00F3299C /* Movie.swift */; };
 		4A54AFF22C2EEA0000FCD6A7 /* MovieDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A54AFF12C2EEA0000FCD6A7 /* MovieDetailsViewModel.swift */; };
 		4A58D2052C2D9D3F000D9057 /* MovieListItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A58D2042C2D9D3F000D9057 /* MovieListItemModel.swift */; };
@@ -44,6 +49,9 @@
 		4A8AC39A2C2ECB2E00EE7996 /* MovieDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8AC3992C2ECB2E00EE7996 /* MovieDetailsVC.swift */; };
 		4AB430E62C2C49B000BF018B /* MovieViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB430E42C2C49B000BF018B /* MovieViewCell.swift */; };
 		4AB430E72C2C49B000BF018B /* MovieViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AB430E52C2C49B000BF018B /* MovieViewCell.xib */; };
+		4AC4EDCA2C37D08A008D7274 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC4EDC92C37D08A008D7274 /* SignUpVC.swift */; };
+		4AC4EDCD2C37D2E5008D7274 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC4EDCC2C37D2E5008D7274 /* User.swift */; };
+		4AC4EDD02C37EE88008D7274 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC4EDCF2C37EE88008D7274 /* AuthViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +70,8 @@
 		4A0C09D22C32A031003B2469 /* Debouncer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debouncer.swift; sourceTree = "<group>"; };
 		4A0C09D42C32CB38003B2469 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		4A0C09D52C32CB38003B2469 /* SearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
+		4A1A78E82C3697F800737514 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4A1A78F72C369F1800737514 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		4A4C4E272C2C2B0E00F3299C /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		4A54AFF12C2EEA0000FCD6A7 /* MovieDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewModel.swift; sourceTree = "<group>"; };
 		4A58D2042C2D9D3F000D9057 /* MovieListItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListItemModel.swift; sourceTree = "<group>"; };
@@ -85,6 +95,9 @@
 		4A8AC3992C2ECB2E00EE7996 /* MovieDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsVC.swift; sourceTree = "<group>"; };
 		4AB430E42C2C49B000BF018B /* MovieViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewCell.swift; sourceTree = "<group>"; };
 		4AB430E52C2C49B000BF018B /* MovieViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieViewCell.xib; sourceTree = "<group>"; };
+		4AC4EDC92C37D08A008D7274 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		4AC4EDCC2C37D2E5008D7274 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4AC4EDCF2C37EE88008D7274 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +106,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A8AC3892C2E976E00EE7996 /* Kingfisher in Frameworks */,
+				4A1A78EC2C36987F00737514 /* FirebaseAuth in Frameworks */,
+				4A1A78EE2C36987F00737514 /* FirebaseFirestore in Frameworks */,
+				4A1A78F02C36987F00737514 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +134,7 @@
 		4A0384D62C2A8856002FA7DE /* UIkitMovieCenter */ = {
 			isa = PBXGroup;
 			children = (
+				4A1A78F22C369EC000737514 /* Authentication */,
 				4A8AC38A2C2E979700EE7996 /* Util */,
 				4A8AC3832C2E899900EE7996 /* Presentation */,
 				4A58D2062C2D9DE3000D9057 /* Data */,
@@ -131,6 +148,7 @@
 				4A0384E52C2A8857002FA7DE /* Info.plist */,
 				4AB430E42C2C49B000BF018B /* MovieViewCell.swift */,
 				4AB430E52C2C49B000BF018B /* MovieViewCell.xib */,
+				4A1A78E82C3697F800737514 /* GoogleService-Info.plist */,
 			);
 			path = UIkitMovieCenter;
 			sourceTree = "<group>";
@@ -206,6 +224,33 @@
 			isa = PBXGroup;
 			children = (
 				4A0C09CE2C3289EA003B2469 /* SettingsVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4A1A78F22C369EC000737514 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				4AC4EDCE2C37EE73008D7274 /* ViewModel */,
+				4AC4EDCB2C37D295008D7274 /* Model */,
+				4AC4EDC72C37D031008D7274 /* SignUp */,
+				4A1A78F32C369ECF00737514 /* Login */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		4A1A78F32C369ECF00737514 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				4A1A78F42C369EDA00737514 /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		4A1A78F42C369EDA00737514 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4A1A78F72C369F1800737514 /* LoginVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -391,6 +436,38 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		4AC4EDC72C37D031008D7274 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				4AC4EDC82C37D03D008D7274 /* View */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		4AC4EDC82C37D03D008D7274 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4AC4EDC92C37D08A008D7274 /* SignUpVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4AC4EDCB2C37D295008D7274 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4AC4EDCC2C37D2E5008D7274 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4AC4EDCE2C37EE73008D7274 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4AC4EDCF2C37EE88008D7274 /* AuthViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -409,6 +486,9 @@
 			name = UIkitMovieCenter;
 			packageProductDependencies = (
 				4A8AC3882C2E976E00EE7996 /* Kingfisher */,
+				4A1A78EB2C36987F00737514 /* FirebaseAuth */,
+				4A1A78ED2C36987F00737514 /* FirebaseFirestore */,
+				4A1A78EF2C36987F00737514 /* FirebaseFirestoreSwift */,
 			);
 			productName = UIkitMovieCenter;
 			productReference = 4A0384D42C2A8856002FA7DE /* UIkitMovieCenter.app */;
@@ -440,6 +520,7 @@
 			mainGroup = 4A0384CB2C2A8856002FA7DE;
 			packageReferences = (
 				4A8AC3872C2E976E00EE7996 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				4A1A78EA2C36987F00737514 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 4A0384D52C2A8856002FA7DE /* Products */;
 			projectDirPath = "";
@@ -460,6 +541,7 @@
 				4AB430E72C2C49B000BF018B /* MovieViewCell.xib in Resources */,
 				4A0384E42C2A8857002FA7DE /* Base in Resources */,
 				4A0384DF2C2A8856002FA7DE /* Base in Resources */,
+				4A1A78E92C3697F800737514 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +562,7 @@
 				4A0384EC2C2AB993002FA7DE /* HomeVC.swift in Sources */,
 				4A4C4E282C2C2B0E00F3299C /* Movie.swift in Sources */,
 				4A58D20D2C2D9F00000D9057 /* MovieListResponse.swift in Sources */,
+				4AC4EDD02C37EE88008D7274 /* AuthViewModel.swift in Sources */,
 				4A8AC3822C2E878E00EE7996 /* MovieRepositoryImpl.swift in Sources */,
 				4A0C09CF2C3289EA003B2469 /* SettingsVC.swift in Sources */,
 				4A0384D82C2A8856002FA7DE /* AppDelegate.swift in Sources */,
@@ -494,8 +577,11 @@
 				4A0C09C52C328804003B2469 /* SearchVC.swift in Sources */,
 				4A0C09D12C329E9C003B2469 /* SearchViewModel.swift in Sources */,
 				4A7086972C354867001BAB70 /* MovieBannerScrollView.swift in Sources */,
+				4AC4EDCD2C37D2E5008D7274 /* User.swift in Sources */,
 				4A8AC3932C2ECA2700EE7996 /* MovieDetailsResponse.swift in Sources */,
+				4AC4EDCA2C37D08A008D7274 /* SignUpVC.swift in Sources */,
 				4A54AFF22C2EEA0000FCD6A7 /* MovieDetailsViewModel.swift in Sources */,
+				4A1A78F82C369F1800737514 /* LoginVC.swift in Sources */,
 				4A8AC37F2C2E85A200EE7996 /* ApiServiceImpl.swift in Sources */,
 				4A58D2182C2DA58A000D9057 /* ApiClientError.swift in Sources */,
 				4A8AC37C2C2E850A00EE7996 /* ApiService.swift in Sources */,
@@ -725,6 +811,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		4A1A78EA2C36987F00737514 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.28.1;
+			};
+		};
 		4A8AC3872C2E976E00EE7996 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -736,6 +830,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4A1A78EB2C36987F00737514 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4A1A78EA2C36987F00737514 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		4A1A78ED2C36987F00737514 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4A1A78EA2C36987F00737514 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		4A1A78EF2C36987F00737514 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4A1A78EA2C36987F00737514 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
 		4A8AC3882C2E976E00EE7996 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4A8AC3872C2E976E00EE7996 /* XCRemoteSwiftPackageReference "Kingfisher" */;

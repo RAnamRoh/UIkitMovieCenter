@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MovieListItemModel : Identifiable{
+struct MovieListItemModel : Identifiable ,Codable{
     
     var id: Int
     var title: String
@@ -15,7 +15,7 @@ struct MovieListItemModel : Identifiable{
     var rating: Double
     var runtime : Int
     var releaseYear: Int
-    let genres: [MovieGenre]
+    let genres: [MovieGenre]?
     
     
     
@@ -27,7 +27,7 @@ struct MovieListItemModel : Identifiable{
             rating: movie.rating,
             runtime: movie.runtime,
             releaseYear: movie.year, 
-            genres: movie.genres.map({ MovieGenre.fromString($0) })
+            genres: movie.genres?.map({ MovieGenre.fromString($0) })
         )
     }
     

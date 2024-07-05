@@ -107,15 +107,17 @@ class MovieBannerView: UIView {
         titleLabel.text = movie.title
         
         
-        let gArray = movie.genres.map({$0.toString()})
-        
-        for genre in gArray {
-            let label = UILabel()
-            label.text = genre
-            label.font = UIFont.systemFont(ofSize: 12)
-            label.textColor = .white
-            genreStackView.addArrangedSubview(label)
+        if let gArray = movie.genres?.map({$0.toString()}) {
+            for genre in gArray {
+                let label = UILabel()
+                label.text = genre
+                label.font = UIFont.systemFont(ofSize: 12)
+                label.textColor = .white
+                genreStackView.addArrangedSubview(label)
+            }
         }
+        
+       
         
         yearRuntimeLabel.text = "\(movie.releaseYear) • \(movie.runtime) mins"
     }

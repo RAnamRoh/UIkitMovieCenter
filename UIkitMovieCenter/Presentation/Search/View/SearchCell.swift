@@ -65,17 +65,22 @@ class SearchCell: UITableViewCell {
     
     func getGenreString(movie : MovieListItemModel) -> String{
         
-        let genreStrings = movie.genres.map { $0.toString() }
         
-        let combinedString = genreStrings.enumerated().map { (index, element) in
-            if index == genreStrings.count - 1 {
-                      return element
-                  } else {
-                      return element + " • "
-                  }
-              }.joined()
         
-        return combinedString
+        if let genreStrings = movie.genres?.map({ $0.toString() })  {
+            let combinedString = genreStrings.enumerated().map { (index, element) in
+                 if index == genreStrings.count - 1 {
+                           return element
+                       } else {
+                           return element + " • "
+                       }
+                   }.joined()
+            return combinedString
+        }
+        
+      
+        return ""
+        
     }
     
     
