@@ -20,8 +20,8 @@ class SearchVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 44
+        //tableView.rowHeight = UITableView.automaticDimension
+        //tableView.estimatedRowHeight = 44
         let nibName = UINib(nibName: SearchCell.identifier, bundle: nil)
         tableView.register(nibName, forCellReuseIdentifier: SearchCell.identifier)
         

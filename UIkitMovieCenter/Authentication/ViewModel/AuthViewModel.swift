@@ -31,21 +31,28 @@ enum AuthError: LocalizedError, Equatable {
 @MainActor
 class AuthViewModel : ObservableObject {
     @Published var userSession : FirebaseAuth.User?
-    @Published var currentUser : User?
+    @Published var currentUser : User? {
+        didSet{
+            self.didUpdateUser?()
+        }
+    }
     @Published var authError: AuthError?
     
     
     static let shared = AuthViewModel()
+    let userWatchlistViewModel = WatchListViewModel.shared
     
     private init(){
         
         self.userSession = Auth.auth().currentUser
-        
         Task{
             await fetchUser()
+            
         }
         
     }
+    
+    var didUpdateUser : (() -> Void)?
     
     func signIn(withEmail email : String, password : String) async throws {
         print("Sign IN Called")
@@ -55,10 +62,14 @@ class AuthViewModel : ObservableObject {
             print("\(result)")
             self.userSession = result.user
             await fetchUser()
+//            await userWatchlistViewModel.fetchUser()
+            userWatchlistViewModel.clearData()
+            userWatchlistViewModel.setUserId(result.user.uid)
         }
         catch{
             handleAuthError(error)
             print("DEBUG: Failed to LOG IN with Error \(error)")
+            throw error
         }
         
     }
@@ -72,10 +83,14 @@ class AuthViewModel : ObservableObject {
             let encodedUser = try Firestore.Encoder().encode(user)
             try await Firestore.firestore().collection("users").document(user.id).setData(encodedUser)
             await fetchUser()
+
+            userWatchlistViewModel.clearData()
+            userWatchlistViewModel.setUserId(result.user.uid)
         }
         catch{
             handleAuthError(error)
             print("DEBUG: Failed to Create Account with Error \(error.localizedDescription)")
+            throw error
         }
         
     }
@@ -87,6 +102,7 @@ class AuthViewModel : ObservableObject {
             try Auth.auth().signOut()
             self.userSession = nil
             self.currentUser = nil
+            userWatchlistViewModel.clearData()
         }
         catch{
             print("DEBUG: Failed to sign Out")

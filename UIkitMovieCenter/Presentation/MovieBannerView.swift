@@ -16,6 +16,8 @@ class MovieBannerView: UIView {
     
     var movie: MovieListItemModel
     
+    let watchListViewModel = WatchListViewModel.shared
+    
     init(movie: MovieListItemModel) {
         self.movie = movie
         super.init(frame: .zero)
@@ -128,7 +130,11 @@ class MovieBannerView: UIView {
     
     
     @objc private func watchListButtonPressed(){
-        print("You Pressed a Watchlist Button for : \(movie.title)")
+       
+        Task {
+            await watchListViewModel.addMovies(movie: movie)
+            print("You Pressed a Watchlist Button for : \(movie.title)")
+        }
     }
     
 }

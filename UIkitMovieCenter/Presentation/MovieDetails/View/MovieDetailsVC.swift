@@ -25,6 +25,7 @@ class MovieDetailsVC: UIViewController {
     
     @IBOutlet var castCollection: UICollectionView!
     
+    let watchListViewModel = WatchListViewModel.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,8 +85,16 @@ class MovieDetailsVC: UIViewController {
     
     
     private func addMovieToWatchList(){
-        guard let movie = viewModel.movie else {return}
-        print("You Pressed a Watchlist Button for : \(movie.title)")
+        guard let movie = viewModel.movie?.toMovieListItem() else {return}
+        
+        Task{
+         
+              await watchListViewModel.addMovies(movie: movie)
+          
+            print("You Pressed a Watchlist Button for : \(movie.title)")
+        }
+        
+       
     }
 
 }

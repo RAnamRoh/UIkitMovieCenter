@@ -26,6 +26,8 @@ class SearchCell: UITableViewCell {
     
     @IBOutlet var watchListBTN: UIButton!
     
+    let watchListViewModel = WatchListViewModel.shared
+    
     var movie : MovieListItemModel? {
         didSet{
             configureCell()
@@ -92,7 +94,11 @@ class SearchCell: UITableViewCell {
     
     private func addMovieToWatchList(){
         guard let movie = movie else {return}
-        print("You Pressed a Watchlist Button for : \(movie.title)")
+        Task {
+               await watchListViewModel.addMovies(movie: movie)
+            print("You Pressed a Watchlist Button for : \(movie.title)")
+        }
+        
     }
     
 }

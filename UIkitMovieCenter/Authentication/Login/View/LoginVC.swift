@@ -18,7 +18,9 @@ class LoginVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
         
     }
     
@@ -41,7 +43,7 @@ class LoginVC: UIViewController {
                 navigateToHome()
             }
             catch {
-                
+                print("There was a problem \(error)")
             }
         }
         
@@ -56,6 +58,20 @@ class LoginVC: UIViewController {
                 }
             }
     }
+    
+    
+}
+
+extension LoginVC : UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+    }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     
     
 }

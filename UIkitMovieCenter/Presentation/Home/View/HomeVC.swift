@@ -17,7 +17,8 @@ class HomeVC: UIViewController {
     
     @IBOutlet weak var bannerScrollView: MovieBannerScrollView!
     
-   
+    @IBOutlet var userName: UILabel!
+    let authViewModel = AuthViewModel.shared
     
     private let viewModel = MovieListViewModel(
         movieRepository: MovieRepositoryImpl(apiService: ApiServiceImpl(apiClient: ApiClientImpl())))
@@ -32,14 +33,20 @@ class HomeVC: UIViewController {
     
     func initViewModel(){
         viewModel.userDelegate = self
+        configureBindings()
     }
     
+    func configureBindings(){
+        authViewModel.didUpdateUser = { [weak self] in
+            self?.userName.text = self?.authViewModel.currentUser?.fullName ?? ""
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         initViewModel()
-        
+        userName.text = authViewModel.currentUser?.fullName ?? ""
         
         
         let nibName = UINib(nibName: MovieViewCell.identifier, bundle: nil)
