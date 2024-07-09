@@ -12,6 +12,8 @@ import FirebaseCore
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
+    var window: UIWindow?
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -19,10 +21,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        
         
         FirebaseApp.configure()
-        
+        applyDarkModePreference()
         return true
     }
 
+    
+    private func applyDarkModePreference() {
+        if #available(iOS 13.0, *) {
+            let darkModeEnabled = UserDefaults.standard.bool(forKey: "darkModeEnabled")
+            let style: UIUserInterfaceStyle = darkModeEnabled ? .dark : .light
+            updateInterfaceStyleForAllWindows(style)
+        }
+    }
+    
+    private func updateInterfaceStyleForAllWindows(_ style: UIUserInterfaceStyle) {
+        if #available(iOS 13.0, *) {
+            UIApplication.shared.windows.forEach { window in
+                window.overrideUserInterfaceStyle = style
+            }
+        }
+    }
+    
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {

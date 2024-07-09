@@ -25,7 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
               
               self.window = UIWindow(windowScene: windowScene)
               let storyboard = UIStoryboard(name: "Main", bundle: nil)
-              
+              applyDarkModePreference()
 
         
         if authViewModel.userSession != nil {
@@ -37,6 +37,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
               
               self.window?.makeKeyAndVisible()
+    }
+    
+    private func applyDarkModePreference() {
+        if #available(iOS 13.0, *) {
+            let darkModeEnabled = UserDefaults.standard.bool(forKey: "darkModeEnabled")
+            let style: UIUserInterfaceStyle = darkModeEnabled ? .dark : .light
+            updateInterfaceStyleForAllWindows(style)
+        }
+    }
+    
+    private func updateInterfaceStyleForAllWindows(_ style: UIUserInterfaceStyle) {
+        if #available(iOS 13.0, *) {
+            UIApplication.shared.windows.forEach { window in
+                window.overrideUserInterfaceStyle = style
+            }
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

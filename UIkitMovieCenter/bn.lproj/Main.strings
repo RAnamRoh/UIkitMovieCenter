@@ -1,0 +1,132 @@
+
+/* Class = "UIButton"; configuration.title = "Sign Up"; ObjectID = "1bf-zK-x7q"; */
+"1bf-zK-x7q.configuration.title" = "Sign Up";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "1bf-zK-x7q"; */
+"1bf-zK-x7q.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "4py-bP-1Hc"; */
+"4py-bP-1Hc.placeholder" = "Password";
+
+/* Class = "UILabel"; text = "UN"; ObjectID = "6IY-4a-H6i"; */
+"6IY-4a-H6i.text" = "UN";
+
+/* Class = "UILabel"; text = "Top Picks"; ObjectID = "6x1-Z5-1TV"; */
+"6x1-Z5-1TV.text" = "Top Picks";
+
+/* Class = "UIButton"; configuration.title = "Logout"; ObjectID = "BeX-cw-fmf"; */
+"BeX-cw-fmf.configuration.title" = "Logout";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "BeX-cw-fmf"; */
+"BeX-cw-fmf.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "BS Movie Center"; ObjectID = "Dno-9m-Mvf"; */
+"Dno-9m-Mvf.text" = "BS Movie Center";
+
+/* Class = "UIButton"; configuration.title = "Add to Watchlist"; ObjectID = "E7s-R1-nvS"; */
+"E7s-R1-nvS.configuration.title" = "Add to Watchlist";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "E7s-R1-nvS"; */
+"E7s-R1-nvS.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Don't Have an Account?"; ObjectID = "EJC-NT-VbE"; */
+"EJC-NT-VbE.text" = "Don't Have an Account?";
+
+/* Class = "UILabel"; text = "Settings"; ObjectID = "GCA-yB-2CJ"; */
+"GCA-yB-2CJ.text" = "Settings";
+
+/* Class = "UILabel"; text = "Overall Rating"; ObjectID = "GTE-2s-gxQ"; */
+"GTE-2s-gxQ.text" = "Overall Rating";
+
+/* Class = "UILabel"; text = "Welcome,"; ObjectID = "Ibt-Ia-zpS"; */
+"Ibt-Ia-zpS.text" = "Welcome,";
+
+/* Class = "UILabel"; text = "Description"; ObjectID = "JKj-3F-cUu"; */
+"JKj-3F-cUu.text" = "Description";
+
+/* Class = "UILabel"; text = "Movie Title"; ObjectID = "KPi-Su-isS"; */
+"KPi-Su-isS.text" = "Movie Title";
+
+/* Class = "UILabel"; text = "Theme"; ObjectID = "L49-xp-EZI"; */
+"L49-xp-EZI.text" = "Theme";
+
+/* Class = "UIButton"; configuration.title = "Sign In"; ObjectID = "LtN-sr-ZRz"; */
+"LtN-sr-ZRz.configuration.title" = "Sign In";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "LtN-sr-ZRz"; */
+"LtN-sr-ZRz.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "User Name"; ObjectID = "Ptd-nL-AeU"; */
+"Ptd-nL-AeU.text" = "User Name";
+
+/* Class = "UILabel"; text = "Overall Rating"; ObjectID = "Rf2-4V-uJc"; */
+"Rf2-4V-uJc.text" = "Overall Rating";
+
+/* Class = "UILabel"; text = "Cast"; ObjectID = "Ro2-kL-US9"; */
+"Ro2-kL-US9.text" = "Cast";
+
+/* Class = "UILabel"; text = "Dark Mode"; ObjectID = "SWA-nl-3TU"; */
+"SWA-nl-3TU.text" = "Dark Mode";
+
+/* Class = "UILabel"; text = "Lets Sign In"; ObjectID = "WbZ-wx-zH8"; */
+"WbZ-wx-zH8.text" = "Lets Sign In";
+
+/* Class = "UIButton"; configuration.title = "Delete Account"; ObjectID = "XOK-9Q-iar"; */
+"XOK-9Q-iar.configuration.title" = "Delete Account";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "XOK-9Q-iar"; */
+"XOK-9Q-iar.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Rating"; ObjectID = "XYA-VS-xEO"; */
+"XYA-VS-xEO.text" = "Rating";
+
+/* Class = "UILabel"; text = "Account"; ObjectID = "ZOg-zE-eJn"; */
+"ZOg-zE-eJn.text" = "Account";
+
+/* Class = "UILabel"; text = "Year"; ObjectID = "bEo-c4-CSE"; */
+"bEo-c4-CSE.text" = "Year";
+
+/* Class = "UILabel"; text = "Select Languge"; ObjectID = "bXx-6Q-K9K"; */
+"bXx-6Q-K9K.text" = "Select Languge";
+
+/* Class = "UILabel"; text = "Language"; ObjectID = "dR1-Od-XQ0"; */
+"dR1-Od-XQ0.text" = "Language";
+
+/* Class = "UIButton"; configuration.title = "Sign Up"; ObjectID = "iGX-Pd-TUD"; */
+"iGX-Pd-TUD.configuration.title" = "Sign Up";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "iGX-Pd-TUD"; */
+"iGX-Pd-TUD.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "jjm-0p-Xrg"; */
+"jjm-0p-Xrg.placeholder" = "Password";
+
+/* Class = "UILabel"; text = "Duration"; ObjectID = "ko8-ls-Tpg"; */
+"ko8-ls-Tpg.text" = "Duration";
+
+/* Class = "UISegmentedControl"; sSQ-5J-bbv.segmentTitles[0] = "English"; ObjectID = "sSQ-5J-bbv"; */
+"sSQ-5J-bbv.segmentTitles[0]" = "English";
+
+/* Class = "UISegmentedControl"; sSQ-5J-bbv.segmentTitles[1] = "Bangla"; ObjectID = "sSQ-5J-bbv"; */
+"sSQ-5J-bbv.segmentTitles[1]" = "Bangla";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "t0n-yP-vUq"; */
+"t0n-yP-vUq.placeholder" = "Email";
+
+/* Class = "UILabel"; text = "Lets Sign Up"; ObjectID = "tBb-Q1-dKg"; */
+"tBb-Q1-dKg.text" = "Lets Sign Up";
+
+/* Class = "UILabel"; text = "Trending"; ObjectID = "vM5-mS-2bM"; */
+"vM5-mS-2bM.text" = "Trending";
+
+/* Class = "UITextField"; placeholder = "Full Name"; ObjectID = "wTz-Cc-F2J"; */
+"wTz-Cc-F2J.placeholder" = "Full Name";
+
+/* Class = "UILabel"; text = "0.0"; ObjectID = "wln-WO-RBV"; */
+"wln-WO-RBV.text" = "0.0";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "yGX-GF-eBr"; */
+"yGX-GF-eBr.placeholder" = "Email";
+
+/* Class = "UILabel"; text = "BS Movie Center"; ObjectID = "ybd-Vv-pkI"; */
+"ybd-Vv-pkI.text" = "BS Movie Center";

@@ -47,7 +47,7 @@ class HomeVC: UIViewController {
 
         initViewModel()
         userName.text = authViewModel.currentUser?.fullName ?? ""
-        
+     
         
         let nibName = UINib(nibName: MovieViewCell.identifier, bundle: nil)
         self.movieCollectionView.register(nibName, forCellWithReuseIdentifier: MovieViewCell.identifier)
