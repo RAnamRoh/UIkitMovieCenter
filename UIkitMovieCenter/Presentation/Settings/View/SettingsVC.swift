@@ -10,7 +10,7 @@ import UIKit
 class SettingsVC: UIViewController {
 
     
-    let viewModel = AuthViewModel.shared
+    let authViewModel = AuthViewModel.shared
     
     
     @IBOutlet var userInitials: UILabel!
@@ -25,10 +25,27 @@ class SettingsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        initViewModel()
         loadPreferences()
+        configureUI()
        
     }
     
+    func initViewModel(){
+        configureBindings()
+    }
+    
+    func configureBindings(){
+        authViewModel.didUpdateUser = { [weak self] in
+            self?.userName.text = self?.authViewModel.currentUser?.fullName ?? ""
+            self?.userInitials.text = self?.authViewModel.currentUser?.initials
+        }
+    }
+    
+    func configureUI(){
+        userName.text = authViewModel.currentUser?.fullName ?? ""
+        userInitials.text = authViewModel.currentUser?.initials
+    }
 
     
     @IBAction func darkModeSwitchChanged(_ sender: UISwitch) {
@@ -53,7 +70,7 @@ class SettingsVC: UIViewController {
     
     
     @IBAction func logOutButtonPressed(_ sender: UIButton) {
-        viewModel.signOut()
+        authViewModel.signOut()
         navigateToRoot()
     }
     

@@ -17,11 +17,23 @@ class SignUpVC: UIViewController {
     
     @IBOutlet var passwordTextField: UITextField!
     
+    
+    @IBOutlet var signUpButton: UIButton!
+    
     let viewModel = AuthViewModel.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        fNameTextField.delegate = self
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
 
+        emailTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        fNameTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+               
+        validateFields()
         
     }
     
@@ -48,7 +60,7 @@ class SignUpVC: UIViewController {
                 navigateToHome()
             }
             catch{
-                print("Problem Creating USer from Sign Up VC")
+                showAlert(message: "There was a Problem Creating the Account : Error \(error)")
             }
         }
     }
@@ -62,6 +74,24 @@ class SignUpVC: UIViewController {
                 }
             }
     }
+    
+    func showAlert(message: String) {
+         let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+         present(alert, animated: true, completion: nil)
+     }
+    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+           validateFields()
+       }
+    
+    func validateFields() {
+        guard let email = emailTextField.text, let password = passwordTextField.text, let fullName = fNameTextField.text else {
+             signUpButton.isEnabled = false
+             return
+         }
+        signUpButton.isEnabled = Utilities.isValidEmail(email) && !password.isEmpty && password.count > 5
+     }
     
     
     

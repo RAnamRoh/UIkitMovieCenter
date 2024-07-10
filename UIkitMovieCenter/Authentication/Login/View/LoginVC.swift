@@ -14,6 +14,8 @@ class LoginVC: UIViewController {
     
     @IBOutlet var passwordTextField: UITextField!
     
+    @IBOutlet var signInButton: UIButton!
+    
     let viewModel = AuthViewModel.shared
     
     override func viewDidLoad() {
@@ -21,6 +23,12 @@ class LoginVC: UIViewController {
         
         emailTextField.delegate = self
         passwordTextField.delegate = self
+        
+        
+        emailTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+               
+               validateFields()
         
     }
     
@@ -43,7 +51,7 @@ class LoginVC: UIViewController {
                 navigateToHome()
             }
             catch {
-                print("There was a problem \(error)")
+                showAlert(message: "There was a problem: \(error.localizedDescription)")
             }
         }
         
@@ -58,6 +66,25 @@ class LoginVC: UIViewController {
                 }
             }
     }
+    
+    func showAlert(message: String) {
+         let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+         present(alert, animated: true, completion: nil)
+     }
+    
+    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+           validateFields()
+       }
+    
+    func validateFields() {
+         guard let email = emailTextField.text, let password = passwordTextField.text else {
+             signInButton.isEnabled = false
+             return
+         }
+        signInButton.isEnabled = Utilities.isValidEmail(email) && !password.isEmpty && password.count > 5
+     }
     
     
 }

@@ -105,8 +105,6 @@
 		4AB430E52C2C49B000BF018B /* MovieViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieViewCell.xib; sourceTree = "<group>"; };
 		4ABF79142C3D673A00C33F58 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		4ABF79192C3D6EA600C33F58 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		4ABF791B2C3D6EF000C33F58 /* bn */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bn; path = bn.lproj/Main.strings; sourceTree = "<group>"; };
-		4ABF791C2C3D6EF000C33F58 /* bn */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bn; path = bn.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4AC4EDC92C37D08A008D7274 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		4AC4EDCC2C37D2E5008D7274 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4AC4EDCF2C37EE88008D7274 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
@@ -533,7 +531,6 @@
 			knownRegions = (
 				en,
 				Base,
-				bn,
 			);
 			mainGroup = 4A0384CB2C2A8856002FA7DE;
 			packageReferences = (
@@ -620,7 +617,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				4A0384DE2C2A8856002FA7DE /* Base */,
-				4ABF791B2C3D6EF000C33F58 /* bn */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -637,7 +633,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				4ABF79192C3D6EA600C33F58 /* en */,
-				4ABF791C2C3D6EF000C33F58 /* bn */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
