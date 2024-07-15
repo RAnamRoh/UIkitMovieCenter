@@ -1,132 +1,131 @@
-
 /* Class = "UIButton"; configuration.title = "Sign Up"; ObjectID = "1bf-zK-x7q"; */
-"1bf-zK-x7q.configuration.title" = "Sign Up";
+"1bf-zK-x7q.configuration.title" = "সাইন আপ";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "1bf-zK-x7q"; */
-"1bf-zK-x7q.normalTitle" = "Button";
+"1bf-zK-x7q.normalTitle" = "বাটন";
 
 /* Class = "UITextField"; placeholder = "Password"; ObjectID = "4py-bP-1Hc"; */
-"4py-bP-1Hc.placeholder" = "Password";
+"4py-bP-1Hc.placeholder" = "পাসওয়ার্ড";
 
 /* Class = "UILabel"; text = "UN"; ObjectID = "6IY-4a-H6i"; */
-"6IY-4a-H6i.text" = "UN";
+"6IY-4a-H6i.text" = "ইউএন";
 
 /* Class = "UILabel"; text = "Top Picks"; ObjectID = "6x1-Z5-1TV"; */
-"6x1-Z5-1TV.text" = "Top Picks";
+"6x1-Z5-1TV.text" = "শীর্ষ পছন্দ";
 
 /* Class = "UIButton"; configuration.title = "Logout"; ObjectID = "BeX-cw-fmf"; */
-"BeX-cw-fmf.configuration.title" = "Logout";
+"BeX-cw-fmf.configuration.title" = "লগআউট";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "BeX-cw-fmf"; */
-"BeX-cw-fmf.normalTitle" = "Button";
+"BeX-cw-fmf.normalTitle" = "বাটন";
 
 /* Class = "UILabel"; text = "BS Movie Center"; ObjectID = "Dno-9m-Mvf"; */
-"Dno-9m-Mvf.text" = "BS Movie Center";
+"Dno-9m-Mvf.text" = "বিএস মুভি সেন্টার";
 
 /* Class = "UIButton"; configuration.title = "Add to Watchlist"; ObjectID = "E7s-R1-nvS"; */
-"E7s-R1-nvS.configuration.title" = "Add to Watchlist";
+"E7s-R1-nvS.configuration.title" = "ওয়াচলিস্টে যোগ করুন";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "E7s-R1-nvS"; */
-"E7s-R1-nvS.normalTitle" = "Button";
+"E7s-R1-nvS.normalTitle" = "বাটন";
 
 /* Class = "UILabel"; text = "Don't Have an Account?"; ObjectID = "EJC-NT-VbE"; */
-"EJC-NT-VbE.text" = "Don't Have an Account?";
+"EJC-NT-VbE.text" = "অ্যাকাউন্ট নেই?";
 
 /* Class = "UILabel"; text = "Settings"; ObjectID = "GCA-yB-2CJ"; */
-"GCA-yB-2CJ.text" = "Settings";
+"GCA-yB-2CJ.text" = "সেটিংস";
 
 /* Class = "UILabel"; text = "Overall Rating"; ObjectID = "GTE-2s-gxQ"; */
-"GTE-2s-gxQ.text" = "Overall Rating";
+"GTE-2s-gxQ.text" = "সামগ্রিক রেটিং";
 
 /* Class = "UILabel"; text = "Welcome,"; ObjectID = "Ibt-Ia-zpS"; */
-"Ibt-Ia-zpS.text" = "Welcome,";
+"Ibt-Ia-zpS.text" = "স্বাগতম,";
 
 /* Class = "UILabel"; text = "Description"; ObjectID = "JKj-3F-cUu"; */
-"JKj-3F-cUu.text" = "Description";
+"JKj-3F-cUu.text" = "বর্ণনা";
 
 /* Class = "UILabel"; text = "Movie Title"; ObjectID = "KPi-Su-isS"; */
-"KPi-Su-isS.text" = "Movie Title";
+"KPi-Su-isS.text" = "মুভির শিরোনাম";
 
 /* Class = "UILabel"; text = "Theme"; ObjectID = "L49-xp-EZI"; */
-"L49-xp-EZI.text" = "Theme";
+"L49-xp-EZI.text" = "থিম";
 
 /* Class = "UIButton"; configuration.title = "Sign In"; ObjectID = "LtN-sr-ZRz"; */
-"LtN-sr-ZRz.configuration.title" = "Sign In";
+"LtN-sr-ZRz.configuration.title" = "সাইন ইন";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "LtN-sr-ZRz"; */
-"LtN-sr-ZRz.normalTitle" = "Button";
+"LtN-sr-ZRz.normalTitle" = "বাটন";
 
 /* Class = "UILabel"; text = "User Name"; ObjectID = "Ptd-nL-AeU"; */
-"Ptd-nL-AeU.text" = "User Name";
+"Ptd-nL-AeU.text" = "ব্যবহারকারীর নাম";
 
 /* Class = "UILabel"; text = "Overall Rating"; ObjectID = "Rf2-4V-uJc"; */
-"Rf2-4V-uJc.text" = "Overall Rating";
+"Rf2-4V-uJc.text" = "সামগ্রিক রেটিং";
 
 /* Class = "UILabel"; text = "Cast"; ObjectID = "Ro2-kL-US9"; */
-"Ro2-kL-US9.text" = "Cast";
+"Ro2-kL-US9.text" = "কাস্ট";
 
 /* Class = "UILabel"; text = "Dark Mode"; ObjectID = "SWA-nl-3TU"; */
-"SWA-nl-3TU.text" = "Dark Mode";
+"SWA-nl-3TU.text" = "ডার্ক মোড";
 
 /* Class = "UILabel"; text = "Lets Sign In"; ObjectID = "WbZ-wx-zH8"; */
-"WbZ-wx-zH8.text" = "Lets Sign In";
+"WbZ-wx-zH8.text" = "সাইন ইন করি";
 
 /* Class = "UIButton"; configuration.title = "Delete Account"; ObjectID = "XOK-9Q-iar"; */
-"XOK-9Q-iar.configuration.title" = "Delete Account";
+"XOK-9Q-iar.configuration.title" = "অ্যাকাউন্ট মুছুন";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "XOK-9Q-iar"; */
-"XOK-9Q-iar.normalTitle" = "Button";
+"XOK-9Q-iar.normalTitle" = "বাটন";
 
 /* Class = "UILabel"; text = "Rating"; ObjectID = "XYA-VS-xEO"; */
-"XYA-VS-xEO.text" = "Rating";
+"XYA-VS-xEO.text" = "রেটিং";
 
 /* Class = "UILabel"; text = "Account"; ObjectID = "ZOg-zE-eJn"; */
-"ZOg-zE-eJn.text" = "Account";
+"ZOg-zE-eJn.text" = "অ্যাকাউন্ট";
 
 /* Class = "UILabel"; text = "Year"; ObjectID = "bEo-c4-CSE"; */
-"bEo-c4-CSE.text" = "Year";
+"bEo-c4-CSE.text" = "বছর";
 
 /* Class = "UILabel"; text = "Select Languge"; ObjectID = "bXx-6Q-K9K"; */
-"bXx-6Q-K9K.text" = "Select Languge";
+"bXx-6Q-K9K.text" = "ভাষা নির্বাচন করুন";
 
 /* Class = "UILabel"; text = "Language"; ObjectID = "dR1-Od-XQ0"; */
-"dR1-Od-XQ0.text" = "Language";
+"dR1-Od-XQ0.text" = "ভাষা";
 
 /* Class = "UIButton"; configuration.title = "Sign Up"; ObjectID = "iGX-Pd-TUD"; */
-"iGX-Pd-TUD.configuration.title" = "Sign Up";
+"iGX-Pd-TUD.configuration.title" = "সাইন আপ";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "iGX-Pd-TUD"; */
-"iGX-Pd-TUD.normalTitle" = "Button";
+"iGX-Pd-TUD.normalTitle" = "বাটন";
 
 /* Class = "UITextField"; placeholder = "Password"; ObjectID = "jjm-0p-Xrg"; */
-"jjm-0p-Xrg.placeholder" = "Password";
+"jjm-0p-Xrg.placeholder" = "পাসওয়ার্ড";
 
 /* Class = "UILabel"; text = "Duration"; ObjectID = "ko8-ls-Tpg"; */
-"ko8-ls-Tpg.text" = "Duration";
+"ko8-ls-Tpg.text" = "সময়কাল";
 
 /* Class = "UISegmentedControl"; sSQ-5J-bbv.segmentTitles[0] = "English"; ObjectID = "sSQ-5J-bbv"; */
-"sSQ-5J-bbv.segmentTitles[0]" = "English";
+"sSQ-5J-bbv.segmentTitles[0]" = "ইংরেজি";
 
 /* Class = "UISegmentedControl"; sSQ-5J-bbv.segmentTitles[1] = "Bangla"; ObjectID = "sSQ-5J-bbv"; */
-"sSQ-5J-bbv.segmentTitles[1]" = "Bangla";
+"sSQ-5J-bbv.segmentTitles[1]" = "বাংলা";
 
 /* Class = "UITextField"; placeholder = "Email"; ObjectID = "t0n-yP-vUq"; */
-"t0n-yP-vUq.placeholder" = "Email";
+"t0n-yP-vUq.placeholder" = "ইমেইল";
 
 /* Class = "UILabel"; text = "Lets Sign Up"; ObjectID = "tBb-Q1-dKg"; */
-"tBb-Q1-dKg.text" = "Lets Sign Up";
+"tBb-Q1-dKg.text" = "সাইন আপ করি";
 
 /* Class = "UILabel"; text = "Trending"; ObjectID = "vM5-mS-2bM"; */
-"vM5-mS-2bM.text" = "Trending";
+"vM5-mS-2bM.text" = "ট্রেন্ডিং";
 
 /* Class = "UITextField"; placeholder = "Full Name"; ObjectID = "wTz-Cc-F2J"; */
-"wTz-Cc-F2J.placeholder" = "Full Name";
+"wTz-Cc-F2J.placeholder" = "সম্পূর্ণ নাম";
 
 /* Class = "UILabel"; text = "0.0"; ObjectID = "wln-WO-RBV"; */
-"wln-WO-RBV.text" = "0.0";
+"wln-WO-RBV.text" = "০.০";
 
 /* Class = "UITextField"; placeholder = "Email"; ObjectID = "yGX-GF-eBr"; */
-"yGX-GF-eBr.placeholder" = "Email";
+"yGX-GF-eBr.placeholder" = "ইমেইল";
 
 /* Class = "UILabel"; text = "BS Movie Center"; ObjectID = "ybd-Vv-pkI"; */
-"ybd-Vv-pkI.text" = "BS Movie Center";
+"ybd-Vv-pkI.text" = "বিএস মুভি সেন্টার";
